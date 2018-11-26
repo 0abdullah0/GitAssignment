@@ -1,5 +1,6 @@
 package Git;
 import java.util.*;
+import java.util.Arrays;
 public class TeamFuns 
 {
 	private static Scanner input;
@@ -63,6 +64,7 @@ public class TeamFuns
 		 case 14://Get average
 			 break;
 		 case 15://Get median
+			 get_median();
 			 break;
 		 case 16://Return only primes
 			 break;
@@ -78,5 +80,13 @@ public class TeamFuns
 		System.out.println("Invalid input!");
 		break;
 		 }
+		 }
+		 public static void get_median(){
+			int[] nums =new int[5];
+			Scanner x=new Scanner(System.in);
+			for(int i=0;i<5;i++)
+				nums[i]=x.nextInt();
+			 Arrays.sort(nums);
+			 System.out.println("median is :" + nums[3]);
 		 }
 }
